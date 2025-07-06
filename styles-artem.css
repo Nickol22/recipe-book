@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFED7A;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #FBC02D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    height: 80px;
+
+
+}
+
+.Logo {
+    width: 75px;
+    height: 75px;
+}
+
+.menu {
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0;
+
+}
+
+.menu-elements {
+    text-decoration: none;
+    color: #343434;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu-elements:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main-screen {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #FFF287;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    width: 200px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+.card-title {
+    color: orange;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card-subtitle {
+    font-weight: bold;
+    text-align: left;
+}
+
+.card-list {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.card-button {
+    background: #C1D82F;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px auto;
+    display: block;
+}
+
+.card2 {
+    width: 200px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card2-title {
+    color: orange;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card2-subtitle {
+    font-weight: bold;
+    text-align: left;
+}
+
+.card2-list {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.card2-image {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card2-button {
+    background: #C1D82F;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px auto;
+    display: block;
+}
+
+.main-screen2 {
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items:center;
+    text-align: center;
+    background-color: #FFF287;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+}
+
