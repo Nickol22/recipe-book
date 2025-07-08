@@ -45,19 +45,6 @@ header {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.main-screen {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    background-color: #FFF287;
-    padding: 20px 50px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-
-}
 
 .card {
     width: 200px;
@@ -146,17 +133,13 @@ header {
     display: block;
 }
 
-.main-screen2 {
-
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items:center;
-    text-align: center;
-    background-color: #FFF287;
-    padding: 20px 50px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-
+.cards-container {
+  display: flex;
+  justify-content: center;  /* центрує по горизонталі */
+  align-items: flex-start;  /* вирівнює по верхньому краю */
+  gap: 400px;                /* відстань між картками */
+  background-color: #FFF287;
+  padding: 40px 50px;
 }
+
 
