@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Додати рецепт</title>
+  <link rel="stylesheet" href="style-vova.css" />
+</head>
+
+<body>
+  <header>
+    <img class="Logo" src="Logo.png" alt="Тут має бути картинка" />
+    <div class="menu">
+      <a class="menu-elements" href="#">Головна</a>
+      <a class="menu-elements" href="#">Додати рецепт</a>
+      <a class="menu-elements" href="#">Сніданки</a>
+      <a class="menu-elements" href="#">Обіди</a>
+      <a class="menu-elements" href="#">Десерти</a>
+      <a class="menu-elements" href="#">Контакти</a>
+    </div>
+  </header>
+
+  <div class="main-screen">
+    <div class="image-block">
+      <div class="image-preview" id="preview">Зображення не вибрано</div>
+      <input type="file" id="imageInput" hidden />
+      <button class="addimg" id="uploadBtn">Додати зображення</button>
+    </div>
+
+    <div class="add-recept">
+      <input type="text" placeholder="Назва рецепту..." class="recept-input" />
+      <textarea placeholder="Про продукт..." class="recept-text"></textarea>
+      <textarea placeholder="Опис..." class="recept-text"></textarea>
+      <textarea placeholder="Інгредієнти..." class="recept-text"></textarea>
+    </div>
+  </div>
+
+  <button class="sumbit" id="submit">Відправити</button>
+
+  <script src="script-vova.js"></script>
+</body>
+
+</html>
+
