@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff8c6;
+}
+
+header {
+  background-color: #f6b800;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Logo {
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-elements {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Стили для приветственного экрана */
+.welcome-screen {
+  background-color: #fff48f;
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.welcome-screen h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.welcome-screen p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.welcome-screen button {
+  padding: 12px 25px;
+  background-color: #c6ff00;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+.content-section {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+footer {
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
