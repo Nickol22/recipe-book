@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (title) {
       sessionStorage.setItem('lastRecipeName', title);
-      console.log("📌 Збережено в sessionStorage:", title);
+      console.log(" Збережено в sessionStorage:", title);
     }
   });
 });
+console
