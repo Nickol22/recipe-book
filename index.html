@@ -1,27 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style-Nicole.css">
-    <link rel="stylesheet" href="style-vova.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Книга рецептів</title>
+  <link rel="stylesheet" href="style-Nicole.css" />
 </head>
-  <body>
+<body>
   <header>
     <img class="Logo" src="Logo.png" alt="Тут має бути картинка" />
     <div class="menu">
-      <a class="menu-elements" href="#">Головна</a>
-      <a class="menu-elements" href="#">Додати рецепт</a>
-      <a class="menu-elements" href="#">Сніданки</a>
-      <a class="menu-elements" href="#">Обіди</a>
-      <a class="menu-elements" href="#">Десерти</a>
-      <a class="menu-elements" href="#">Контакти</a>
+      <a class="menu-elements" href="#" onclick="showSection('home')">Головна</a>
+      <a class="menu-elements" href="#" onclick="showSection('add')">Додати рецепт</a>
+      <a class="menu-elements" href="#" onclick="showSection('breakfast')">Сніданки</a>
+      <a class="menu-elements" href="#" onclick="showSection('lunch')">Обіди</a>
+      <a class="menu-elements" href="#" onclick="showSection('dessert')">Десерти</a>
+      <a class="menu-elements" href="#" onclick="showSection('contacts')">Контакти</a>
     </div>
   </header>
 
+  <main>
+    <div class="welcome-screen" id="welcome">
+      <h1>КНИГА РЕЦЕПТІВ</h1>
+      <p>смачно, просто і з душею</p>
+      <button onclick="showSection('home')">Розпочати</button>
+    </div>
 
-  <script src="script-vova.js"></script>
-</body>  
+    <section id="home" class="content-section" style="display: none;">Це головна сторінка.</section>
+    <section id="add" class="content-section" style="display: none;">Додати новий рецепт.</section>
+    <section id="breakfast" class="content-section" style="display: none;">Сніданки.</section>
+    <section id="lunch" class="content-section" style="display: none;">Обіди.</section>
+    <section id="dessert" class="content-section" style="display: none;">Десерти.</section>
+    <section id="contacts" class="content-section" style="display: none;">Контакти.</section>
+  </main>
 
+  <footer>
+    <p>© 2025 Книга Рецептів</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      // Скрыть приветственный экран
+      const welcome = document.getElementById('welcome');
+      if (welcome) {
+        welcome.style.display = 'none';
+      }
+
+      // Скрыть все секции
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Показать нужную секцию
+      const selected = document.getElementById(sectionId);
+      if (selected) {
+        selected.style.display = 'block';
+      }
+    }
+  </script>
+</body>
 </html>
