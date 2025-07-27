@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles-evelina.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles-evelina.css" />
+  <title>Панкейки з бананом</title>
 </head>
 <body>
-<script src="script-evelina.js"></script>
+    <nav>
+    <a href="add.html">додати рецепт</a>
+    <a href="index.html">головна</a>
+    <a href="breakfast.html">сніданки</a>
+    <a href="lunch.html">обід</a>
+    <a href="desserts.html">десерти</a>
+    <a href="contacts.html">контакти</a>
+  </nav>
+  <header>
+    <h1>Панкейки з бананом</h1>
+
+  </header>
+
+  <div class="container">
+    <div class="text">
+      <h2><span style="color:#f68c1f">Панкейки з бананом</span></h2>
+      <p><strong>Панкейки з бананом</strong> – це смачний та
+      поживний сніданок, який поєднує в собі лужкість традиційник панкейків з солодким
+      смаком банана. Ше чудова альтернатива
+      звичайним млинцям, що додає натуральної солодкості та аромату</p>
+      <p><em>Опис страви:</em><br/>
+     Панкейки з бананом готуються з додаванням
+     бананового пюре або шматочків банана до тіста, що робить їх ніжними, мʼякими та ароматними. Їх можна подавати з різними.
+     начинками, такими як фрукти, ягоди,
+     сметана, згущене молоко, шоколад, горіхи,
+     джем або просто посипати цукровою пудрою..</p>
+     
+      <a href="breakfast.html" class="btn-back">Назад</a>
+    </div>
+       
+    <div class="image">
+      <img src="pancake.jpg" alt="панкейки з бананом" />
+    </div>
+  </div>
 </body>
+
+<!-- <button class="btn" onclick="history.back()">Назад</button> -->
 </html>
+<script>
+    // Додаємо обробник події для кнопки "Назад"
+    document.querySelector('.btn-back') .addEventListener('click', function(event)
+    {
+        event.preventDefault(); // Запобігаємо переходу за поселанням
+        history.back(); // Повертаємося на попередню сторінку
+    });
