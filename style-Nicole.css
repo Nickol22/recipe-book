@@ -82,3 +82,8 @@ footer {
   text-align: center;
   color: #333;
 }
+#home{
+    max-width: fit-content;
+    padding: 10px;
+    margin:auto ; 
+}
