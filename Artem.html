@@ -1,55 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Рецепти</title>
     <link rel="stylesheet" href="styles-artem.css">
 </head>
+<style>
+    .delete-button {
+        background: #d8432f;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        margin: 5px auto;
+        display: block;
+    }
+</style>
 
 <body>
-
     <header>
-        <img class='Logo' src='Logo.png' alt='Тут має бути картинка'>
+        <img class='Logo' src='Logo.png' alt='Логотип'>
         <div class="menu">
             <a class='menu-elements' href='index.html'>Головна</a>
             <a class='menu-elements' href='vova.html'>Додати рецепт</a>
-            <a class='menu-elements' href='#'>Рецепти</a>
-            <a class='menu-elements' href='#'>Контакти</a>
+            <a class='menu-elements' href='Artem.html'>Рецепти</a>
+            <a class='menu-elements' href='evelina.html'>Обраний рецепт</a>
         </div>
     </header>
-    <p id="savedRecipeInfo"></p>
-    <div class="cards-container">
-        <div class="card">
-            <img src="pancake.jpg" alt="Панкейки" class="card-image">
-            <h3 class="card-title">Панкейки з бананом</h3>
-            <p class="card-subtitle">Інгредієнти:</p>
-            <ul class="card-list">
-                <li>1 банан</li>
-                <li>1 яйце</li>
-                <li>50мл молока</li>
-                <li>100г муки</li>
-            </ul>
-            <button class="card-button" onclick="saveRecipe('Панкейки з бананом')">Опис</button>
-        </div>
-
-        <div class="card2">
-            <img src="lemonade_.jpg" alt="Лимонад" class="card2-image">
-            <h3 class="card2-title">Лимонад з м’ятою</h3>
-            <p class="card2-subtitle">Інгредієнти</p>
-            <ul class="card2-list">
-                <li>1 лимон</li>
-                <li>1 л води</li>
-                <li>2ст. л. цукру</li>
-                <li>Декілька листків м’яти</li>
-            </ul>
-            <button class="card2-button" onclick="saveRecipe('Лимонад з м’ятою')">Опис</button>
-        </div>
-    </div>
-
-
-
+    <div class="cards-container" id="cardsContainer"></div>
     <script src="script-artem.js"></script>
 </body>
 
