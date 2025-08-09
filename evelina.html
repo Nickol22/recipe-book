@@ -1,54 +1,88 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="styles-evelina.css" />
-  <title>Панкейки з бананом</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Опис рецепту</title>
+  <link rel="stylesheet" href="styles-evelina.css">
+  <style>
+    .delete-button {
+      background: #d8432f;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 0px;
+    }
+
+    .back-button {
+      background: #C1D82F;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 0px auto;
+      display: block;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
+
 <body>
-    <nav>
-    <a href="add.html">додати рецепт</a>
-    <a href="index.html">головна</a>
-    <a href="breakfast.html">сніданки</a>
-    <a href="lunch.html">обід</a>
-    <a href="desserts.html">десерти</a>
-    <a href="contacts.html">контакти</a>
+  <nav>
+    <a href="index.html">Головна</a>
+    <a href="vova.html">Додати рецепт</a>
+    <a href="Artem.html">Рецепти</a>
+    <a href='evelina.html'>Обраний рецепт</a>
   </nav>
-  <header>
-    <h1>Панкейки з бананом</h1>
-
-  </header>
-
-  <div class="container">
-    <div class="text">
-      <h2><span style="color:#f68c1f">Панкейки з бананом</span></h2>
-      <p><strong>Панкейки з бананом</strong> – це смачний та
-      поживний сніданок, який поєднує в собі лужкість традиційник панкейків з солодким
-      смаком банана. Ше чудова альтернатива
-      звичайним млинцям, що додає натуральної солодкості та аромату</p>
-      <p><em>Опис страви:</em><br/>
-     Панкейки з бананом готуються з додаванням
-     бананового пюре або шматочків банана до тіста, що робить їх ніжними, мʼякими та ароматними. Їх можна подавати з різними.
-     начинками, такими як фрукти, ягоди,
-     сметана, згущене молоко, шоколад, горіхи,
-     джем або просто посипати цукровою пудрою..</p>
-     
-      <a href="breakfast.html" class="btn-back">Назад</a>
+  <main>
+    <div class="container">
+      <div class="text" id="recipeDetails"></div>
+      <div class="image" id="recipeImage"></div>
     </div>
-       
-    <div class="image">
-      <img src="pancake.jpg" alt="панкейки з бананом" />
-    </div>
-  </div>
+  </main>
+  <script>
+    const recipes = JSON.parse(localStorage.getItem('recipes')) || [];
+    const selectedTitle = localStorage.getItem('selectedRecipe');
+    const recipe = recipes.find(r => r.title === selectedTitle);
+
+    const detailsEl = document.getElementById('recipeDetails');
+    const imageEl = document.getElementById('recipeImage');
+
+    if (recipe) {
+      detailsEl.innerHTML = `
+        <h2>${recipe.title}</h2>
+        <p><strong>Про продукт:</strong> ${recipe.about}</p>
+        <p><strong>Опис:</strong> ${recipe.description}</p>
+        <p><strong>Інгредієнти:</strong> ${recipe.ingredients}</p>
+        <div class="button-group">
+          <button class="delete-button" onclick="deleteCurrentRecipe()">Видалити рецепт</button>
+          <button class="back-button" onclick="history.back()">Назад</button>
+        </div>
+      `;
+      imageEl.innerHTML = `<img src="${recipe.image}" alt="${recipe.title}" />`;
+    } else {
+      detailsEl.innerHTML = '<p>Рецепт не знайдено.</p>';
+      imageEl.innerHTML = '';
+    }
+
+    function deleteCurrentRecipe() {
+      const updatedRecipes = recipes.filter(r => r.title !== selectedTitle);
+      localStorage.setItem('recipes', JSON.stringify(updatedRecipes));
+      alert(`Рецепт "${selectedTitle}" видалено.`);
+      location.href = 'Artem.html';
+    }
+  </script>
+
 </body>
 
-<!-- <button class="btn" onclick="history.back()">Назад</button> -->
 </html>
-<script>
-    // Додаємо обробник події для кнопки "Назад"
-    document.querySelector('.btn-back') .addEventListener('click', function(event)
-    {
-        event.preventDefault(); // Запобігаємо переходу за поселанням
-        history.back(); // Повертаємося на попередню сторінку
-    });
