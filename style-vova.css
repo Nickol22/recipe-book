@@ -17,7 +17,15 @@ header {
 .Logo {
     width: 75px;
     height: 75px;
+    perspective: 1000px;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
 }
+
+.Logo:hover {
+    transform: rotateY(360deg) rotateX(15deg);
+}
+
 
 .menu {
     display: flex;
