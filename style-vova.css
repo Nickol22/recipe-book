@@ -77,6 +77,13 @@ header {
     font-size: 14px;
 }
 
+.image-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
 .addimg {
     background-color: #D4F15A;
     border: none;
